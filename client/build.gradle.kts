@@ -6,7 +6,7 @@ plugins {
     application
 }
 
-group = "me.user"
+group = "client.turtle"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -15,13 +15,12 @@ repositories {
 
 dependencies {
     val ktorVersion = "1.6.4"
-    val kotlinVersion = "1.5.31"
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }
 

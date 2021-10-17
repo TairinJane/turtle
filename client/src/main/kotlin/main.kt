@@ -53,7 +53,7 @@ fun main(args: Array<String>) {
                     "exit" -> ExitCommand()
                     else -> throw IllegalArgumentException("No such command exists. Did you mean 'exit'?")
                 }
-                command.execute()
+                println(command.execute())
             } catch (e: Exception) {
                 println(e.message)
             }
