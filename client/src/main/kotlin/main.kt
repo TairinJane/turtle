@@ -1,6 +1,6 @@
 import java.util.function.Function
 
-fun main(args: Array<String>) {
+fun main() {
     println("Hello from Turtle!")
     printInstruction()
 
@@ -10,7 +10,6 @@ fun main(args: Array<String>) {
 
         if (!input.isNullOrEmpty()) {
             val list = input.split(" ").take(2)
-            println(list)
 
             val commandText = list[0]
             try {
